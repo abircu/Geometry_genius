@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geomatry genious</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="mt-20">
+        <!-- container -->
+        <div class="flex flex-col lg:flex-row">
+            <div class=" flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- first cart -->
+                <div class="card  w-96 bg-base-100 shadow-xl pt-6">
+                    <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="font-medium text-3xl text-center">Traingle</h2>
+                        <p class="text-center">Area (A) = 0.5 X b X h</p>
+                        <div class="ml-6">
+                            <input class="w-24 bg-gray-200 px-2 " type="text" placeholder="base" id="base">
+                            <span>cm</span>
+                            <input class="w-24 bg-gray-200 px-2" type="text" placeholder="height" id="heigh">
+                            <span>cm</span>
+                        </div>
+                        <p class="text-center text-2xl">Area: <span class="font-medium text-red-700"
+                                id="result-area"></span>cm
+                            <sup>2</sup>
+                        </p>
+                        <div class="card-actions justify-end">
+                            <button class=" btn btn-primary w-full" id="tringle-btn">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd card -->
+                <div class="card  w-96 bg-base-100 shadow-xl pt-6">
+                    <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="font-medium text-3xl text-center">Rectangle</h2>
+                        <p class="text-center">Area (A) = w x l</p>
+                        <div class="ml-6">
+                            <input class="w-24 bg-gray-200 px-2 " type="text" placeholder="width" id="rectangle-width">
+                            <span>cm</span>
+                            <input class="w-24 bg-gray-200 px-2" type="text" placeholder="length" id="rectangle-length">
+                            <span>cm</span>
+                        </div>
+                        <p class="text-2xl text-center">Area:<span class="font-medium text-red-700"
+                                id="resut-field"></span>
+                            cm <sup>2</sup></p>
+                        <div class="card-actions justify-end">
+                            <button class=" btn btn-primary w-full" id="rectangle-btn">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- third cart -->
+                <div class="card  w-96 bg-base-100 shadow-xl pt-6">
+                    <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="font-medium text-3xl text-center">Traingle</h2>
+                        <p class="text-center">Area (A) = 0.5 X b X h</p>
+                        <div class="ml-6">
+                            <input class="w-24 bg-gray-200 px-2 " type="text" placeholder="base"
+                                id="parallelogram-base">
+                            <span>cm</span>
+                            <input class="w-24 bg-gray-200 px-2" type="text" placeholder="height"
+                                id="parallelogram-height">
+                            <span>cm</span>
+                        </div>
+                        <p class="text-2xl text-center">Area:<span class="font-medium text-red-700"
+                                id="parallelogram-text"></span>
+                            cm <sup>2</sup></p>
+                        <div class="card-actions justify-end">
+                            <button id="parallelogram-button" class=" btn btn-primary w-full"
+                                id="parallelogram">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Area calculation -->
+            <div>
+                <div class="text-4xl bg-gray-300 flex-grow">
+                    Area calculation
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/Area-calculator.js"></script>
+</body>
+
+</html>
