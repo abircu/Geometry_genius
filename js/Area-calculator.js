@@ -12,6 +12,16 @@ function setInnerTextElement(ElementTextId, TextArea) {
   allTextArea.innerText = TextArea;
 }
 
+// element entry function
+// function addToCalculationEntry(areaTypes, area) {
+//   const calculationEntry = document.getElementById("calculation-entry");
+//   const p = document.createElement("p");
+//   p.innerHTML = ` ${
+//     count + 1
+//   } ${areaTypes} ${area} cm <sup>2</sup> <button class="btn btn-succes>Convert</button>`;
+//   calculationEntry.appendChild(p);
+// }
+
 // this code for aplicable in the triangle card
 document.getElementById("tringle-btn").addEventListener("click", function () {
   // step 01: get base input
