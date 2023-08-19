@@ -13,14 +13,17 @@ function setInnerTextElement(ElementTextId, TextArea) {
 }
 
 // element entry function
-// function addToCalculationEntry(areaTypes, area) {
-//   const calculationEntry = document.getElementById("calculation-entry");
-//   const p = document.createElement("p");
-//   p.innerHTML = ` ${
-//     count + 1
-//   } ${areaTypes} ${area} cm <sup>2</sup> <button class="btn btn-succes>Convert</button>`;
-//   calculationEntry.appendChild(p);
-// }
+function addToCalculationEntry(areaTypes, area) {
+  const calculationEntry = document.getElementById("calculation-entry");
+  const count = calculationEntry.childElementCount;
+
+  const p = document.createElement("p");
+  p.classList.add("my-4");
+  p.innerHTML = `${
+    count + 1
+  }. ${areaTypes} ${area} cm <sup>2</sup> <button class="btn btn-sm btn-success ml-2 mr-2">Convert</button>`;
+  calculationEntry.appendChild(p);
+}
 
 // this code for aplicable in the triangle card
 document.getElementById("tringle-btn").addEventListener("click", function () {
@@ -38,6 +41,7 @@ document.getElementById("tringle-btn").addEventListener("click", function () {
 
   //   step 04:get resut area
   setInnerTextElement("result-area", areaOfResult);
+  addToCalculationEntry("triangle", areaOfResult);
 });
 
 // this code code for aplicable only ractange area cart
@@ -54,6 +58,7 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
   const ractangularResult = firstInput * secendInput;
   //   get area field
   setInnerTextElement("resut-field", ractangularResult);
+  addToCalculationEntry("parallelogram", ractangularResult);
 });
 
 document
@@ -68,6 +73,7 @@ document
     const parallelogramResultArea =
       0.5 * parallelogramBase * parallelogramHeight;
     setInnerTextElement("parallelogram-text", parallelogramResultArea);
+    addToCalculationEntry("parallelogram", parallelogramResultArea);
   });
 document
   .getElementById("ellipse-button")
@@ -82,4 +88,5 @@ document
     const ellipseResult = Math.PI * totalMinorValue;
     const ellipseResultFixed = ellipseResult.toFixed(2);
     setInnerTextElement("ellipse-text", ellipseResultFixed);
+    addToCalculationEntry("ellips", ellipseResultFixed);
   });
